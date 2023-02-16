@@ -76,19 +76,50 @@
 
 
       // ================== Seccion de Nodos =========================
-      // Es muy importante tener encuenta que el querySelectorAll devuele en forma de array, asi que hay que especificar 
-      // con el numero de index entre llaves cual sera el elemento a modificar.
-      var enlases = document.querySelectorAll("#menu ul li a")[1];
-      console.log(enlases.nodeType);
-      console.log(enlases.nodeName);
-      console.log(enlases.attributes);
-      console.log(enlases.firstChild);
-      console.log(enlases.firstChild.nodeValue);
-      // Luego de ir viendo como se puede acceder a un elemento atravez de DOM y sus diferentes selectores
-      // es importante saber manejarlo para poder editarlo con toda tranquilidad gracias a JavaScript
-      // En el sitio web http://developer.mozilla.org esta todo lo que se puede hacer y ver con respecto a este tema
-      enlases.firstChild.nodeValue = "Home";
-      enlases.id = "mi_id";
+      // // Es muy importante tener encuenta que el querySelectorAll devuele en forma de array, asi que hay que especificar 
+      // // con el numero de index entre llaves cual sera el elemento a modificar.
+      // var enlases = document.querySelectorAll("#menu ul li a")[1];
+      // console.log(enlases.nodeType);
+      // console.log(enlases.nodeName);
+      // console.log(enlases.attributes);
+      // console.log(enlases.firstChild);
+      // console.log(enlases.firstChild.nodeValue);
+      // // Luego de ir viendo como se puede acceder a un elemento atravez de DOM y sus diferentes selectores
+      // // es importante saber manejarlo para poder editarlo con toda tranquilidad gracias a JavaScript
+      // // En el sitio web http://developer.mozilla.org esta todo lo que se puede hacer y ver con respecto a este tema
+      // enlases.firstChild.nodeValue = "Home";
+      // enlases.id = "mi_id";
+
+      //================= Seccion de como creer contenido =============================
+
+      // var sidebar = document.querySelector("#sidebar");
+      // var nuevoElemento = document.createElement("H1");
+      // var nuevoTexto = document.createTextNode("Hola desde la interfaz");
+      // nuevoElemento.appendChild(nuevoTexto);
+      // sidebar.appendChild(nuevoElemento);
+      
+      // //Creamos la variable para sideBar
+      // var enlasesSidebar = document.querySelectorAll("#sidebar ul");
+
+      // //Creamos el elemento A del enlase
+      // var nuevoEnlase = document.createElement("A");
+      // nuevoEnlase.setAttribute("href", "#");
+
+      // //Creamos el texto que llevara el elemento a
+      // var textoEnlase = document.createTextNode("Nuevo enlase");
+
+      // //Creamos la lista que se agregara a las ul 
+      // var nuevaLista = document.createElement("LI");
+
+      // // Unimos el enlase nuevo con su texto 
+      // nuevoEnlase.appendChild(textoEnlase);
+      // //Unimos la lista con el enlase
+      // nuevaLista.appendChild(nuevoEnlase);
+      // // Unimos la lista con las demas listas
+      // enlasesSidebar[0].appendChild(nuevaLista);
+
+      //================= Seccion de como duplicar un nodo =============================
+      
 })
 })();
 
