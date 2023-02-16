@@ -119,7 +119,16 @@
       // enlasesSidebar[0].appendChild(nuevaLista);
 
       //================= Seccion de como duplicar un nodo =============================
-      
+      // Creando la variable del contenido que queremos duplicar, el main en este caso
+      var contenido = document.querySelectorAll("main");
+      // Dandole el valor de true a el clon del contenido, como realizar la clonacion como tal
+      var nuevoContenido = contenido[0].cloneNode(true);
+      // Creando la variable del lugar al que queremos colocar el clon del contenido
+      var sideBar = document.querySelector("aside");
+      // Insertamos con el insertBefore() la nueva variable clonada, en la posicion que desemos de la 
+      // variable de destino. insertBefore toma dos parametros, el primero lo que vamos a duplicar, y 
+      // el segundo la posicion y lugar de donde vamos a colocarlo
+      sideBar.insertBefore(nuevoContenido, sideBar.childNodes[5]);
 })
 })();
 
