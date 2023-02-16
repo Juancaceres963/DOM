@@ -161,6 +161,13 @@
       // enlase.parentNode.removeChild(enlase);
 
       //=================== Seccion Remplazando nodos ==============
+      // Al igual que para eliminar hijos, no podemos hacerlo directamente sobre el que queremos hacerlo
+      // debemos hubicarnos en el padre para poder remplazar un hijo (siendo este el qu equeremos remplazar)
+      var viejoTitulo = document.querySelector("main h2");
+      var nuevoTitulo = document.querySelector("footer h2");
+      viejoTitulo.parentNode.replaceChild(nuevoTitulo, viejoTitulo);
+      // En este ejemplo estamos remplazando el titulo del main por el del footer, lo que hace 
+      //que en el footer ya no tenga ese contenido, se puede remplazar por una variable nueva que se cree tambien
 })
 })();
 
