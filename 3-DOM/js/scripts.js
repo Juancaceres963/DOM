@@ -119,16 +119,48 @@
       // enlasesSidebar[0].appendChild(nuevaLista);
 
       //================= Seccion de como duplicar un nodo =============================
-      // Creando la variable del contenido que queremos duplicar, el main en este caso
-      var contenido = document.querySelectorAll("main");
-      // Dandole el valor de true a el clon del contenido, como realizar la clonacion como tal
-      var nuevoContenido = contenido[0].cloneNode(true);
-      // Creando la variable del lugar al que queremos colocar el clon del contenido
-      var sideBar = document.querySelector("aside");
-      // Insertamos con el insertBefore() la nueva variable clonada, en la posicion que desemos de la 
-      // variable de destino. insertBefore toma dos parametros, el primero lo que vamos a duplicar, y 
-      // el segundo la posicion y lugar de donde vamos a colocarlo
-      sideBar.insertBefore(nuevoContenido, sideBar.childNodes[5]);
+      // // Creando la variable del contenido que queremos duplicar, el main en este caso
+      // var contenido = document.querySelectorAll("main");
+      // // Dandole el valor de true a el clon del contenido, como realizar la clonacion como tal
+      // var nuevoContenido = contenido[0].cloneNode(true);
+      // // Creando la variable del lugar al que queremos colocar el clon del contenido
+      // var sideBar = document.querySelector("aside");
+      // // Insertamos con el insertBefore() la nueva variable clonada, en la posicion que desemos de la 
+      // // variable de destino. insertBefore toma dos parametros, el primero lo que vamos a duplicar, y 
+      // // el segundo la posicion y lugar de donde vamos a colocarlo
+      // sideBar.insertBefore(nuevoContenido, sideBar.childNodes[5]);
+
+
+      //================= Seccion de como Insertar elementos en un nodo =============================
+      // //Creando lista de post populares
+      // var sidebar = document.querySelector("aside");
+      // var masVisitados = document.createElement("H2");
+      // var textoVisitados = document.createTextNode("Post mas Visitados");
+      // masVisitados.appendChild(textoVisitados);
+      // sidebar.insertBefore(masVisitados, sidebar.childNodes[0]);
+
+      // var contenido = document.querySelectorAll("main h2");
+      // console.log(contenido);
+      // for (let i = 0; i < contenido.length; i++){
+      //   var nuevoElemento = document.createElement("LI");
+      //   var textoElemento = document.createTextNode(contenido[i].firstChild.nodeValue);
+      //   nuevoElemento.appendChild(textoElemento);
+      //   sidebar.insertBefore(nuevoElemento, sidebar.childNodes[1]);
+      // }
+
+      //================= Seccion de eliminar nodos =====================
+
+      // var primerArticulo = document.querySelector("article");
+      // console.log(primerArticulo);
+      // // Para eleminar elementos del DOM no podemos eleminarlos por si mismos, debemos 
+      // // hacer como una ruta hasta el padre, para luego por ahi poder eliminarlos
+      // primerArticulo.parentNode.removeChild(primerArticulo);
+
+      // var enlase = document.querySelector("#navegacion nav ul li a");
+      // console.log(enlase);
+      // enlase.parentNode.removeChild(enlase);
+
+      //=================== Seccion Remplazando nodos ==============
 })
 })();
 
