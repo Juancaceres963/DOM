@@ -46,8 +46,22 @@
       //Con este contenido podemos cambiar el background a un color negro, gracias al selector de 
       //getElementsByClassName()
 
-      // ============================Selector de elementos getElement============================
-      console.log("Selector de getElement")
+      // ============================Selector de elementos getElementsByTagName======================
+      console.log("Selector de getElementsByTagName");
+      // Este selector va a seleccionar la etiqueta HTML 
+
+      var enlases = document.getElementsByTagName("a");
+      console.log(enlases);
+      console.log(enlases.length);
+      for(let i = 0; i < enlases.length; i++){
+        enlases[i].setAttribute("target", "_blank");
+      }
+
+      var sideBar = document.getElementById("sidebar").getElementsByTagName("a");
+      console.log(sideBar);
+      for (let i = 0; i < sideBar.length; i++){
+        sideBar[i].setAttribute("href", "http://www.google.com");
+      }
 })
 })();
 
