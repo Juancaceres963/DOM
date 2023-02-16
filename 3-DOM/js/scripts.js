@@ -47,21 +47,48 @@
       //getElementsByClassName()
 
       // ============================Selector de elementos getElementsByTagName======================
-      console.log("Selector de getElementsByTagName");
-      // Este selector va a seleccionar la etiqueta HTML 
+      // console.log("Selector de getElementsByTagName");
+      // // Este selector va a seleccionar la etiqueta HTML 
 
-      var enlases = document.getElementsByTagName("a");
-      console.log(enlases);
-      console.log(enlases.length);
-      for(let i = 0; i < enlases.length; i++){
-        enlases[i].setAttribute("target", "_blank");
-      }
+      // var enlases = document.getElementsByTagName("a");
+      // console.log(enlases);
+      // console.log(enlases.length);
+      // for(let i = 0; i < enlases.length; i++){
+      //   enlases[i].setAttribute("target", "_blank");
+      // }
 
-      var sideBar = document.getElementById("sidebar").getElementsByTagName("a");
-      console.log(sideBar);
-      for (let i = 0; i < sideBar.length; i++){
-        sideBar[i].setAttribute("href", "http://www.google.com");
-      }
+      // var sideBar = document.getElementById("sidebar").getElementsByTagName("a");
+      // console.log(sideBar);
+      // for (let i = 0; i < sideBar.length; i++){
+      //   sideBar[i].setAttribute("href", "http://www.google.com");
+      // }
+
+      //==========================Seccion de querySlector()===============================
+      // console.log("Seccion de querySlector()");
+      // // El querySelector al momento de seleccionar algun elemento lo hace de una forma muy similar a la 
+      // // de CSS en su sintaxis para seleccionar elementos. Si es una clase .nombre, si es un id #nombre
+      // var logo = document.querySelector(".logo");
+      // console.log(logo);
+      // // Con querySelectorAll() podemos selecionar todos los elementos que tengan esa clase, o id, o atributo
+      // // Sea cual sea el caso que se esta solicitando
+      // var encabezado = document.querySelectorAll("h2, footer p");
+      // console.log(encabezado);
+
+
+      // ================== Seccion de Nodos =========================
+      // Es muy importante tener encuenta que el querySelectorAll devuele en forma de array, asi que hay que especificar 
+      // con el numero de index entre llaves cual sera el elemento a modificar.
+      var enlases = document.querySelectorAll("#menu ul li a")[1];
+      console.log(enlases.nodeType);
+      console.log(enlases.nodeName);
+      console.log(enlases.attributes);
+      console.log(enlases.firstChild);
+      console.log(enlases.firstChild.nodeValue);
+      // Luego de ir viendo como se puede acceder a un elemento atravez de DOM y sus diferentes selectores
+      // es importante saber manejarlo para poder editarlo con toda tranquilidad gracias a JavaScript
+      // En el sitio web http://developer.mozilla.org esta todo lo que se puede hacer y ver con respecto a este tema
+      enlases.firstChild.nodeValue = "Home";
+      enlases.id = "mi_id";
 })
 })();
 
